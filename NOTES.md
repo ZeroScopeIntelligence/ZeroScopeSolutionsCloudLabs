@@ -1,27 +1,35 @@
-# Amazon Web Services (AWS) Notes
+# Amazon Web Services Notes
 
-Use this file for quick reference notes, terminology, commands, service comparisons, and useful documentation links.
+Quick reference for concepts, commands, service comparisons, and verified troubleshooting.
 
-> Do not store passwords, access keys, private keys, tokens, personal data, or other secrets in this repository.
+> Never store passwords, access keys, private keys, tokens, recovery codes, or personal data here.
 
-## Concepts
+## IAM Concepts
 
-Add concise explanations and examples here.
+- Identity: a user, group, service account, or other principal.
+- Group: a collection of identities used to manage access collectively.
+- Policy or role: a permission definition or named set of permissions.
+- Scope: the resource or hierarchy level where permissions apply.
+- Least privilege: grant only the access required for a task.
 
-## Commands and CLI Reference
+## Provider IAM Model
 
-Record safe, reusable commands here. Remove or redact account identifiers and sensitive values before committing.
+IAM users can be added to IAM groups. Identity-based policies attached to a group apply to its members. For workforce production access, also study IAM Identity Center and federation.
 
-## Service Reference
+## Reference Notes
 
-| Service | Purpose | Notes |
-| --- | --- | --- |
-| To be added | To be added | To be added |
+| Topic | Notes |
+| --- | --- |
+| Identity | IAM users |
+| Groups | IAM groups |
+| Permissions | IAM policies |
+| MFA | Enable for privileged identities |
+| Scope | Use the narrowest practical resource scope |
 
-## Troubleshooting
+## Commands and Troubleshooting
 
-Document errors, causes, and verified solutions.
+Record safe commands and verified fixes. Redact account numbers, project IDs, tenant IDs, and email addresses where appropriate. Never include credentials.
 
-## References
+## Official Documentation
 
-Add official Amazon Web Services documentation links here.
+- [Amazon Web Services IAM documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)
