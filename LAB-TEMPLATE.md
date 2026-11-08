@@ -1,48 +1,48 @@
 # Lab XX: [Lab Title]
 
 ## Platform
-Amazon Web Services (AWS)
+Amazon Web Services
 
 ## Objective
-Describe what this lab is intended to accomplish.
+Describe the goal of this exercise.
 
 ## Learning Outcomes
-- [ ] Outcome 1
-- [ ] Outcome 2
-- [ ] Outcome 3
+- [ ] Create or identify test identities.
+- [ ] Organize identities into groups.
+- [ ] Assign permissions at the correct scope.
+- [ ] Validate allowed and denied actions.
 
 ## Prerequisites
-- Cloud account with appropriate permissions
-- Required CLI, SDK, or tools
-- Estimated cost and resource requirements reviewed
+- Authorized lab account, tenant, organization, or project.
+- Permissions to create test identities and assign roles.
+- MFA enabled for privileged identities.
+- Dedicated test resources and identities.
+- Costs reviewed before creating billable resources.
 
 ## Architecture
-Describe the services and resources used. Add a diagram when helpful.
+Document identities, groups, roles or policies, resources, and permission scopes.
 
 ## Implementation
-Document the steps taken. Do not include passwords, access keys, tokens, or other secrets.
+Document each step. Never include passwords, keys, tokens, or recovery codes.
 
-1. Step one
-2. Step two
-3. Step three
-
-## Validation and Testing
-Explain how you confirmed the configuration works. Include sanitized command output or screenshots when useful.
+## Validation
+Test using a dedicated non-administrator identity. Record both permitted and denied actions.
 
 ## Security Considerations
-- Permissions follow least privilege.
-- Network access is restricted to what is required.
-- Data is protected appropriately.
-- Secrets are stored securely and are not committed to Git.
+- Apply least privilege.
+- Use the narrowest practical scope.
+- Protect privileged accounts with MFA.
+- Avoid production identities for experiments.
+- Never commit secrets.
 
 ## Cleanup
-List the resources to stop or delete to avoid unnecessary charges.
+Remove temporary role assignments, policies, memberships, test identities, and billable resources when no longer needed.
 
 ## Results
-Summarize the outcome and any issues encountered.
+Summarize the outcome and issues.
 
 ## Lessons Learned
-Record what worked, what did not, and what you would improve.
+Record what worked and what you would improve.
 
 ## References
-- Official Amazon Web Services documentation
+- [Official Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)
