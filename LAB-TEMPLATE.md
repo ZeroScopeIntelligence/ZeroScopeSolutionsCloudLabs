@@ -13,20 +13,20 @@ Describe the goal of this exercise.
 - [ ] Validate allowed and denied actions.
 
 ## Prerequisites
-- Authorized lab account, tenant, organization, or project.
-- Permissions to create test identities and assign roles.
+- Authorized organization and project.
+- Permission to manage test identities and IAM policies.
 - MFA enabled for privileged identities.
 - Dedicated test resources and identities.
 - Costs reviewed before creating billable resources.
 
 ## Architecture
-Document identities, groups, roles or policies, resources, and permission scopes.
+Document identities, groups, roles, resources, and permission scopes.
 
 ## Implementation
 Document each step. Never include passwords, keys, tokens, or recovery codes.
 
 ## Validation
-Test using a dedicated non-administrator identity. Record both permitted and denied actions.
+Test using a dedicated non-administrator identity. Record permitted and denied actions.
 
 ## Security Considerations
 - Apply least privilege.
@@ -36,13 +36,10 @@ Test using a dedicated non-administrator identity. Record both permitted and den
 - Never commit secrets.
 
 ## Cleanup
-Remove temporary role assignments, policies, memberships, test identities, and billable resources when no longer needed.
+Remove temporary role bindings, memberships, test identities, and billable resources when no longer needed.
 
-## Results
-Summarize the outcome and issues.
-
-## Lessons Learned
-Record what worked and what you would improve.
+## Results and Lessons Learned
+Summarize outcomes, issues, and improvements.
 
 ## References
-- [Official Google Cloud Platform (GCP) documentation](https://cloud.google.com/iam/docs/overview)
+- [Google Cloud documentation](https://cloud.google.com/docs)
