@@ -1,27 +1,35 @@
 # Microsoft Azure Notes
 
-Use this file for quick reference notes, terminology, commands, service comparisons, and useful documentation links.
+Quick reference for concepts, commands, service comparisons, and verified troubleshooting.
 
-> Do not store passwords, access keys, private keys, tokens, personal data, or other secrets in this repository.
+> Never store passwords, access keys, private keys, tokens, recovery codes, or personal data here.
 
-## Concepts
+## IAM Concepts
 
-Add concise explanations and examples here.
+- Identity: a user, group, service account, or other principal.
+- Group: a collection of identities used to manage access collectively.
+- Policy or role: a permission definition or named set of permissions.
+- Scope: the resource or hierarchy level where permissions apply.
+- Least privilege: grant only the access required for a task.
 
-## Commands and CLI Reference
+## Provider IAM Model
 
-Record safe, reusable commands here. Remove or redact account identifiers and sensitive values before committing.
+Microsoft Entra ID manages users and security groups. Azure RBAC role assignments grant resource access to groups at management-group, subscription, resource-group, or resource scope. Entra directory roles and Azure resource roles are different.
 
-## Service Reference
+## Reference Notes
 
-| Service | Purpose | Notes |
-| --- | --- | --- |
-| To be added | To be added | To be added |
+| Topic | Notes |
+| --- | --- |
+| Identity | Microsoft Entra ID users |
+| Groups | Microsoft Entra ID security groups |
+| Permissions | Azure RBAC role assignments |
+| MFA | Enable for privileged identities |
+| Scope | Use the narrowest practical resource scope |
 
-## Troubleshooting
+## Commands and Troubleshooting
 
-Document errors, causes, and verified solutions.
+Record safe commands and verified fixes. Redact account numbers, project IDs, tenant IDs, and email addresses where appropriate. Never include credentials.
 
-## References
+## Official Documentation
 
-Add official Microsoft Azure documentation links here.
+- [Microsoft Azure IAM documentation](https://learn.microsoft.com/entra/identity/)
