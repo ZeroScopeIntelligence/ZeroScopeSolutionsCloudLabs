@@ -18,8 +18,8 @@ Google Cloud IAM does not create ordinary human user accounts inside a project. 
 
 | Group | Role | Scope |
 | --- | --- | --- |
-| `zs-project-viewers` | `roles/viewer` | Dedicated lab project |
-| `zs-storage-operators` | `roles/storage.objectUser` | Dedicated test bucket |
+| `cloud-project-viewers` | `roles/viewer` | Dedicated lab project |
+| `cloud-storage-operators` | `roles/storage.objectUser` | Dedicated test bucket |
 
 ## Safety Checklist
 - Use disposable lab identities in a non-production environment.
