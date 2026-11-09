@@ -4,8 +4,8 @@
 
 | Group | Role | Scope | Purpose |
 | --- | --- | --- | --- |
-| `zs-project-viewers` | `roles/viewer` | Lab project | Broad read-only visibility |
-| `zs-storage-operators` | `roles/storage.objectUser` | Test bucket | Object operations in one bucket |
+| `cloud-project-viewers` | `roles/viewer` | Lab project | Broad read-only visibility |
+| `cloud-storage-operators` | `roles/storage.objectUser` | Test bucket | Object operations in one bucket |
 
 ## How Google Cloud IAM Works
 Google Cloud IAM grants roles to principals through policy bindings on resources. A binding associates a group principal with a role. The role is not attached to the Google Group object itself.
