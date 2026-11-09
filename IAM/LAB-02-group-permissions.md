@@ -7,8 +7,8 @@ Grant different IAM roles to the groups created in Lab 01. One group receives pr
 
 | Group | Role | Scope |
 | --- | --- | --- |
-| `zs-project-viewers` | `roles/viewer` | Dedicated lab project |
-| `zs-storage-operators` | `roles/storage.objectUser` | Dedicated test bucket |
+| `cloud-project-viewers` | `roles/viewer` | Dedicated lab project |
+| `cloud-storage-operators` | `roles/storage.objectUser` | Dedicated test bucket |
 
 ## Prerequisites
 Complete Lab 01. Use a dedicated non-production project and a test Cloud Storage bucket. Have permission to change IAM policies on the project and bucket.
@@ -17,7 +17,7 @@ Complete Lab 01. Use a dedicated non-production project and a test Cloud Storage
 
 1. Open the [Google Cloud console](https://console.cloud.google.com/) and select the lab project.
 2. Open **IAM & Admin → IAM → Grant access**.
-3. Enter the group principal, for example `zs-project-viewers@YOUR-DOMAIN`.
+3. Enter the group principal, for example `cloud-project-viewers@YOUR-DOMAIN`.
 4. Assign **Viewer** (`roles/viewer`).
 5. Review the project scope and grant access.
 
@@ -27,7 +27,7 @@ Viewer is broad read-only access. Keep this role within a dedicated lab project 
 
 1. Open **Cloud Storage → Buckets** and select the dedicated test bucket.
 2. Open **Permissions → Grant access**.
-3. Enter `zs-storage-operators@YOUR-DOMAIN`.
+3. Enter `cloud-storage-operators@YOUR-DOMAIN`.
 4. Assign **Storage Object User** (`roles/storage.objectUser`) at the bucket scope.
 5. Confirm the principal and bucket scope, then save.
 
