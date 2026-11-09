@@ -7,19 +7,19 @@ Create two lab IAM users, two IAM groups, and add each user to the appropriate g
 
 | User | Group | Purpose |
 | --- | --- | --- |
-| `zs-audit-user` | `ZS-Audit-Readers` | Read-only review |
-| `zs-storage-user` | `ZS-S3-Operators` | Limited access to a test S3 bucket |
+| `cloud-audit-user` | `Cloud-Audit-Readers` | Read-only review |
+| `cloud-storage-user` | `Cloud-S3-Operators` | Limited access to a test S3 bucket |
 
 ## Steps
 
 1. Sign in to the AWS Management Console using an authorized lab administrator. Do not use the root user for routine work.
 2. Open **IAM → User groups → Create group**.
-3. Create `ZS-Audit-Readers`. Do not attach a policy yet.
-4. Repeat to create `ZS-S3-Operators`.
+3. Create `Cloud-Audit-Readers`. Do not attach a policy yet.
+4. Repeat to create `Cloud-S3-Operators`.
 5. Open **IAM → Users → Create user**.
-6. Create `zs-audit-user`. Configure console access only if required for this lab and follow the account's password and MFA requirements.
-7. Add the user to `ZS-Audit-Readers` during creation, or open the group and add the user afterward.
-8. Repeat for `zs-storage-user`, adding it to `ZS-S3-Operators`.
+6. Create `cloud-audit-user`. Configure console access only if required for this lab and follow the account's password and MFA requirements.
+7. Add the user to `Cloud-Audit-Readers` during creation, or open the group and add the user afterward.
+8. Repeat for `cloud-storage-user`, adding it to `Cloud-S3-Operators`.
 9. Require MFA for interactive test access where supported.
 
 ## Validation
