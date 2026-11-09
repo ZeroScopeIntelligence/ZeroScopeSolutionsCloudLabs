@@ -20,8 +20,8 @@ AWS IAM supports IAM users and IAM groups. Add users to groups, then attach iden
 
 | Group | Permission | Scope |
 | --- | --- | --- |
-| ZS-Audit-Readers | ReadOnlyAccess | Dedicated lab environment |
-| ZS-S3-Operators | Custom S3 object policy | Dedicated test storage resource |
+| Cloud-Audit-Readers | ReadOnlyAccess | Dedicated lab environment |
+| Cloud-S3-Operators | Custom S3 object policy | Dedicated test storage resource |
 
 ## Safety Checklist
 
