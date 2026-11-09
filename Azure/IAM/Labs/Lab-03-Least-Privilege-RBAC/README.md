@@ -1,10 +1,10 @@
 # Lab 03 – Least Privilege and Azure RBAC
 
 ## Objective
-Assign permissions based on job responsibilities, using the smallest practical scope.
+Assign Azure resource permissions based on job responsibilities and at the smallest practical scope.
 
 ## Scenario
-Each team needs access to perform its work, but no team should receive subscription-wide administrator access by default.
+Different teams need different levels of access. A security analyst may need to view resources, while a developer may need to manage resources in a dedicated development resource group.
 
 ## Prerequisites
 - Complete Labs 01 and 02.
@@ -12,30 +12,41 @@ Each team needs access to perform its work, but no team should receive subscript
 - Permission to create resource groups and role assignments.
 
 ## Tasks
-1. Create a resource group named rg-zs-cloudlabs for the exercise.
-2. Open Access control (IAM) for that resource group.
-3. Review built-in roles and distinguish Azure resource roles from Microsoft Entra directory roles.
-4. Assign a suitable built-in role to a test group at the resource-group scope. For example, use Reader for a group that only needs to inspect resources.
-5. For a write-permission demonstration, use a separate test resource group and a narrowly scoped role such as Contributor only for the exercise.
-6. Do not assign Owner or User Access Administrator unless a specific exercise requires it and the scope is isolated.
-7. Review Role assignments and record the principal, role, scope, and reason.
-8. Sign in as a test user and verify what the user can and cannot do.
+1. In the Azure portal, create a resource group named `rg-cloudlabs`.
+2. Open **Access control (IAM)** for that resource group.
+3. Review built-in Azure roles and understand the difference between Azure resource roles and Microsoft Entra directory roles.
+4. Assign the **Reader** role to a suitable test group at the `rg-cloudlabs` scope.
+5. If demonstrating write access, create a separate test resource group and assign **Contributor** only to the group that needs it and only at that resource-group scope.
+6. Avoid assigning **Owner** or **User Access Administrator** for this introductory exercise.
+7. Open **Role assignments** and record the principal, role, scope, and business reason.
+8. Sign in as a test user and verify both permitted and prohibited actions.
+9. Review inherited assignments and other access paths before interpreting test results.
 
-## Validation matrix
+## Example access matrix
+
+| Group | Example permission | Scope |
+|---|---|---|
+| Security-Analysts | Reader | `rg-cloudlabs` |
+| Cloud-Developers | Contributor, only if needed for the exercise | Separate development resource group |
+| Network-Engineers | No assignment until a specific network task requires one | Narrow network resource scope |
+| Cloud-Administrators | No standing broad role for this exercise | Use a separately controlled admin workflow |
+
+## Validation
+
 | Test | Expected result |
 |---|---|
-| Reader views resources in assigned scope | Allowed |
+| Reader views resources in the assigned scope | Allowed |
 | Reader changes resource configuration | Denied |
-| User accesses an unrelated resource group | Denied, unless another assignment grants access |
+| User accesses an unrelated resource group | Denied unless another assignment grants access |
 | Authorized administrator reviews role assignments | Visible |
 
-Actual results depend on inherited assignments and other permissions. Check for inherited access before concluding that a denial or allowance is caused by this lab.
+Actual results depend on inherited assignments and other permissions in the tenant.
 
 ## Zero Trust connection
-Least privilege reduces the impact of compromised accounts. Scope permissions to the resource group or individual resource instead of the entire subscription whenever practical.
+Least privilege reduces the potential impact of account compromise. Assign roles at resource or resource-group scope instead of subscription scope whenever practical.
 
 ## Cleanup
-Remove temporary role assignments and delete the test resource group after confirming it contains no needed data.
+Remove temporary role assignments. Delete the test resource group after confirming it contains no required data.
 
 ## Evidence
-Capture role assignment details and successful read-only and denied write tests. Redact secrets and tenant identifiers.
+Capture the role, assigned group, scope, and results of read/write tests. Redact subscription IDs and other sensitive values.
