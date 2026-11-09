@@ -1,35 +1,38 @@
 # Lab 01 – Microsoft Entra ID Identity Basics
 
 ## Objective
-Understand how identities are represented in Microsoft Entra ID and create dedicated test identities for later Zero Trust exercises.
+Understand cloud identities in Microsoft Entra ID and create dedicated test accounts for the remaining IAM labs.
 
 ## Scenario
-A fictional organization is preparing a cloud environment. The administrator needs separate test identities rather than shared administrator accounts.
+A fictional organization is preparing a cloud environment. Administrators need separate, individually assigned identities rather than shared accounts.
 
 ## Prerequisites
-- A Microsoft Entra ID lab tenant.
-- An account authorized to manage users.
+- Access to a Microsoft Entra ID lab tenant.
+- An account authorized to create users.
 - A dedicated lab environment; do not use production identities.
 
 ## Tasks
-1. Open the Microsoft Entra admin center: https://entra.microsoft.com/
-2. Navigate to Identity > Users > All users.
+1. Open the [Microsoft Entra admin center](https://entra.microsoft.com/).
+2. Navigate to **Identity > Users > All users**.
 3. Review the user list and inspect a test user's profile.
-4. Create two fictional cloud-only test users, such as Alex Morgan (alex.morgan) and Jordan Lee (jordan.lee).
-5. Use the tenant's approved password setup process. Do not put passwords in this repository or screenshots.
-6. Review each user's properties, sign-in status, and available identity details.
-7. Confirm that the identities are separate and have no unnecessary administrative roles.
+4. Create two fictional cloud-only test users, for example:
+   - Alex Morgan – username: `alex.morgan`
+   - Jordan Lee – username: `jordan.lee`
+5. Follow your tenant's approved password setup process. Do not save passwords in this repository or screenshots.
+6. Review each user's account status, user type, and assigned directory roles.
+7. Confirm that neither test identity has unnecessary administrative privileges.
 
 ## Validation
 - Both test identities appear in the user list.
 - Each identity has a distinct username.
-- Neither account has unnecessary administrative roles.
+- The accounts are enabled for the intended lab activities.
+- Neither account has an unnecessary directory role.
 
 ## Zero Trust connection
-Identity is the starting point for an access decision, not proof that access should automatically be granted. Later labs add authentication strength, group membership, device context, and scoped authorization.
+An identity is only one input to an access decision. A successful sign-in does not automatically mean the user should be authorized to access every resource.
 
 ## Cleanup
-Delete temporary users when no longer needed, or retain them for later labs with non-privileged access only.
+Keep the accounts for the following labs with non-privileged access, or delete them when the exercise is complete.
 
 ## Evidence
-Capture the user list and user profiles with personal data and tenant-sensitive details hidden.
+Capture the user list and relevant profile details. Hide personal data, tenant identifiers, and other sensitive information before publishing screenshots.
