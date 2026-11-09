@@ -7,12 +7,12 @@ Attach different policies to the two groups. Group membership then gives each te
 
 | Group | Policy | Intended access |
 | --- | --- | --- |
-| `ZS-Audit-Readers` | AWS managed `ReadOnlyAccess` | Read-only visibility across supported AWS services |
-| `ZS-S3-Operators` | Customer-managed `ZS-LabS3ObjectOperator` | List a named lab bucket and read/write objects, without deleting them |
+| `Cloud-Audit-Readers` | AWS managed `ReadOnlyAccess` | Read-only visibility across supported AWS services |
+| `Cloud-S3-Operators` | Customer-managed `Cloud-LabS3ObjectOperator` | List a named lab bucket and read/write objects, without deleting them |
 
 ## Part A: Attach ReadOnlyAccess
 
-1. Open **IAM → User groups → ZS-Audit-Readers**.
+1. Open **IAM → User groups → Cloud-Audit-Readers**.
 2. Open **Permissions → Add permissions → Attach policies**.
 3. Search for and select `ReadOnlyAccess`.
 4. Review and attach the policy.
@@ -45,14 +45,14 @@ This AWS managed policy is broad read-only access. Use it only in an isolated la
 }
 ```
 
-4. Choose **Next**, name it `ZS-LabS3ObjectOperator`, review, and create the policy.
-5. Open **IAM → User groups → ZS-S3-Operators → Permissions → Add permissions → Attach policies**.
-6. Find and attach `ZS-LabS3ObjectOperator`.
+4. Choose **Next**, name it `Cloud-LabS3ObjectOperator`, review, and create the policy.
+5. Open **IAM → User groups → Cloud-S3-Operators → Permissions → Add permissions → Attach policies**.
+6. Find and attach `Cloud-LabS3ObjectOperator`.
 
 ## Part C: Review
 
-- `zs-audit-user` inherits `ReadOnlyAccess` through its group.
-- `zs-storage-user` inherits the custom S3 policy through its group.
+- `cloud-audit-user` inherits `ReadOnlyAccess` through its group.
+- `cloud-storage-user` inherits the custom S3 policy through its group.
 - The custom policy grants no object deletion or bucket administration.
 - Other controls, including resource policies, permissions boundaries, and service control policies, can further restrict effective access.
 
