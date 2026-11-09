@@ -12,18 +12,18 @@ If you only have a personal Google account without a managed organization, group
 
 | User identity | Google Group | Purpose |
 | --- | --- | --- |
-| `zs-audit-user` | `zs-project-viewers` | Read-only project access |
-| `zs-storage-user` | `zs-storage-operators` | Object access to a test bucket |
+| `cloud-audit-user` | `cloud-project-viewers` | Read-only project access |
+| `cloud-storage-user` | `cloud-storage-operators` | Object access to a test bucket |
 
 ## Steps
 
 1. Sign in to the [Google Admin console](https://admin.google.com/) with an authorized administrator.
 2. Open **Directory → Users** and create two dedicated lab users, or identify two existing test users you are authorized to manage.
 3. Open **Directory → Groups → Create group**.
-4. Create `zs-project-viewers`.
-5. Repeat to create `zs-storage-operators`.
-6. Open `zs-project-viewers`, choose **Add members**, and add the `zs-audit-user` identity.
-7. Open `zs-storage-operators` and add `zs-storage-user`.
+4. Create `cloud-project-viewers`.
+5. Repeat to create `cloud-storage-operators`.
+6. Open `cloud-project-viewers`, choose **Add members**, and add the `cloud-audit-user` identity.
+7. Open `cloud-storage-operators` and add `cloud-storage-user`.
 8. Review group visibility and posting settings. Do not make groups public for this exercise.
 
 ## Validation
