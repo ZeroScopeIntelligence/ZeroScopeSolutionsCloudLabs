@@ -1,46 +1,56 @@
 # Azure Identity and Access Management (IAM)
 
-This section teaches Microsoft Entra ID identity administration and applies Zero Trust principles to access decisions.
+This section covers Microsoft Entra ID identity administration and Azure role-based access control (RBAC), using Zero Trust principles throughout the labs.
 
 ## Learning objectives
-- Create and manage users and groups.
-- Assign Azure RBAC roles at the correct scope.
-- Apply least privilege and separate administrative duties.
-- Understand MFA and Conditional Access.
-- Explore privileged access and identity monitoring.
-- Validate access with positive and negative tests.
+- Create and manage cloud identities.
+- Organize users with security groups.
+- Assign permissions using least privilege and appropriate scopes.
+- Understand multifactor authentication (MFA).
+- Evaluate sign-ins with Conditional Access.
+- Reduce standing administrative privileges.
+- Review identity activity and assess access controls.
 
-## Zero Trust principles
-1. **Verify explicitly:** evaluate identity, device, location, and sign-in risk where supported.
-2. **Use least privilege:** grant only the permissions needed, for only the required scope and duration.
-3. **Assume breach:** monitor activity, limit standing privileges, and review access continuously.
+## Zero Trust foundations
+1. **Verify explicitly:** evaluate identity and available sign-in context before granting access.
+2. **Use least privilege:** grant only the permissions required, at the narrowest practical scope and for the shortest practical duration.
+3. **Assume breach:** minimize standing access, monitor activity, and regularly review permissions.
 
-## Labs
-| Lab | Topic |
-|---|---|
-| [01 – Identity Basics](./Labs/Lab-01-Identity-Basics/README.md) | Create test identities |
-| [02 – Users and Groups](./Labs/Lab-02-Users-and-Groups/README.md) | Organize identities |
-| [03 – Least Privilege and RBAC](./Labs/Lab-03-Least-Privilege-RBAC/README.md) | Scope permissions |
-| [04 – MFA](./Labs/Lab-04-MFA/README.md) | Strengthen authentication |
-| [05 – Conditional Access](./Labs/Lab-05-Conditional-Access/README.md) | Evaluate sign-in context |
-| [06 – Privileged Access](./Labs/Lab-06-Privileged-Access/README.md) | Limit standing privileges |
-| [07 – Zero Trust Assessment](./Labs/Lab-07-Zero-Trust-Assessment/README.md) | Test and document controls |
+## Lab sequence
 
-## Suggested test groups
+| Lab | Topic | Outcome |
+|---|---|---|
+| [01 – Identity Basics](./Labs/Lab-01-Identity-Basics/README.md) | Microsoft Entra ID identities | Create dedicated test identities |
+| [02 – Users and Groups](./Labs/Lab-02-Users-and-Groups/README.md) | Identity organization | Create security groups and manage membership |
+| [03 – Least Privilege and RBAC](./Labs/Lab-03-Least-Privilege-RBAC/README.md) | Authorization | Assign and test scoped Azure roles |
+| [04 – MFA](./Labs/Lab-04-MFA/README.md) | Authentication | Configure and validate MFA |
+| [05 – Conditional Access](./Labs/Lab-05-Conditional-Access/README.md) | Context-aware access | Test a safely scoped Conditional Access policy |
+| [06 – Privileged Access](./Labs/Lab-06-Privileged-Access/README.md) | Administrative access | Explore just-in-time privileged access |
+| [07 – Zero Trust Assessment](./Labs/Lab-07-Zero-Trust-Assessment/README.md) | Security assessment | Evaluate controls and document findings |
+
+## Example lab groups
 - Cloud-Administrators
 - Security-Analysts
 - Network-Engineers
 - Cloud-Developers
 
-Use fictional test identities and non-production data. Do not use your everyday administrator account as a test user.
+These are example security groups for organizing test identities. Group membership does not automatically require or justify an administrative role.
 
-## Important safety notes
-- Perform these exercises in a lab tenant or isolated subscription.
-- Confirm licensing and feature availability. Conditional Access and Privileged Identity Management may require specific Microsoft Entra licensing.
-- Keep a tested emergency-access account excluded from experimental Conditional Access policies, protect it strongly, and monitor its use.
-- Start policies in Report-only mode when available. Validate sign-in behavior before enabling enforcement.
-- Never apply broad admin roles or policies to a production tenant for a learning exercise.
-- Remove temporary users, groups, role assignments, and policies during cleanup.
+## Lab conventions
+- Use neutral resource names such as `rg-cloudlabs`, `app-cloudlabs-demo`, and `vm-cloudlabs-test`.
+- Use fictional test identities and non-production data.
+- Never include passwords, recovery codes, access tokens, tenant secrets, or personal information in this repository.
+- Record the role, scope, reason, and owner for every role assignment.
+- Capture redacted screenshots and logs as evidence.
+
+## Safety and prerequisites
+- Perform the exercises in a dedicated lab tenant and non-production subscription.
+- Confirm feature availability and licensing. Conditional Access and Privileged Identity Management capabilities can require specific Microsoft Entra licensing.
+- Maintain a separately protected emergency-access account, exclude it from experimental policies where appropriate, and monitor its use.
+- Begin Conditional Access exercises in Report-only mode when available.
+- Never apply broad policies or administrative roles to production users for a learning exercise.
+- Review inherited role assignments before testing access.
+- Remove temporary users, groups, role assignments, policies, and resources during cleanup.
 
 ## Documentation standard
-For each lab, record the objective, prerequisites, implementation, validation steps, screenshots with sensitive details hidden, results, and cleanup. Never publish passwords, access tokens, tenant secrets, or personal information.
+Each lab includes an objective, scenario, prerequisites, implementation tasks, validation, Zero Trust connection, cleanup, and evidence requirements.
