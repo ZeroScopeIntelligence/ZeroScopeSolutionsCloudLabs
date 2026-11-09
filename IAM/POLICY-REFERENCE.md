@@ -2,8 +2,8 @@
 
 | Group | Policy | Scope / Purpose |
 | --- | --- | --- |
-| `ZS-Audit-Readers` | AWS managed `ReadOnlyAccess` | Broad read-only visibility in the isolated lab account |
-| `ZS-S3-Operators` | Customer-managed `ZS-LabS3ObjectOperator` | List one named bucket and read/write its objects |
+| `Cloud-Audit-Readers` | AWS managed `ReadOnlyAccess` | Broad read-only visibility in the isolated lab account |
+| `Cloud-S3-Operators` | Customer-managed `Cloud-LabS3ObjectOperator` | List one named bucket and read/write its objects |
 
 ## Policy Types
 
