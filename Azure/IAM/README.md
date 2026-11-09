@@ -24,7 +24,7 @@ This section teaches Microsoft Entra ID identity administration and applies Zero
 | [04 – MFA](./Labs/Lab-04-MFA/README.md) | Strengthen authentication |
 | [05 – Conditional Access](./Labs/Lab-05-Conditional-Access/README.md) | Evaluate sign-in context |
 | [06 – Privileged Access](./Labs/Lab-06-Privileged-Access/README.md) | Limit standing privileges |
-| [07 – Zero Trust Assessment](./Labs/Labs-07-Zero-Trust-Assessment/README.md) | Test and document controls |
+| [07 – Zero Trust Assessment](./Labs/Lab-07-Zero-Trust-Assessment/README.md) | Test and document controls |
 
 ## Suggested test groups
 - Cloud-Administrators
